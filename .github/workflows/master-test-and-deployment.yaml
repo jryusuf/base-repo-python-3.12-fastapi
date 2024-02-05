@@ -1,4 +1,4 @@
-name: Run Unit Test via Pytest
+name: Run Unit Test via Pytest for MASTER and deploy to Cloud
 
 on:
   pull_request:
