@@ -1,9 +1,9 @@
 name: Run Unit Test via Pytest for MASTER and deploy to Cloud
 
 on:
-  push:
+  pull_request:
     branches:
-      - release
+      - master
 
 jobs:
   Deployment-Test:
