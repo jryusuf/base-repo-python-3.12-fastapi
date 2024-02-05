@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  Release-Test-And-Artifact:
+  Deployment-Test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
