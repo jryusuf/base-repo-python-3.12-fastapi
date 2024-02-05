@@ -3,13 +3,10 @@ name: Run Unit Test via Pytest
 on:
   push:
     branches:
-      - '*'
-      - '!main'
-      - '!master'
-      - '!release'
+      - master
 
 jobs:
-  Generic-Python-Test:
+  Release-Test-And-Artifact:
     runs-on: ubuntu-latest
     strategy:
       matrix:
