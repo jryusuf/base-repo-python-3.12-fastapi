@@ -1,14 +1,26 @@
-#DEV CONTAINER TEMPLATE for FASTAPI
+# DEV CONTAINER TEMPLATE for FASTAPI
 Dev container project with readily populated vscode extensions and some basic github actions
 
-##Running
+## CI/CD
+When you commit it will run Black for linting and correct the formatting errors
+When you push your project to any branch other than main or release it will run pytest with github actions
+When you create a pull request to release branch it will run the tests, generate your docker image and push it your docker image repository
+When you create a pull request it will run the test, you  can more step for your application
+
+## Python Modules
+Fastapi
+Pytest for unit tests
+Black
+Pre-commit for linting
+
+## Running
 To run this docker dev container in your local or remote machine you need to install Docker and vscode to start
 
 After installation pull this repo or click to run dev container button
 
 It comes with requirements.txt file and automatically install all modules during setup, no need to virtual environment
 
-##Creating your project
+## Creating your project
 After running up the dev container, you need to rename your project and change the remote of your origin for git
 
 Create master for deployment and release branches for builds, or you can rename them however you see fit. If you change the branch names do not forget to change the github action on tags with the new ones in the .github/workflows folder. Don't forget to create branch protection rules for these branches with the listed options:
@@ -33,16 +45,3 @@ DOCKER_PASSWORD
 DOCKER_USERNAME
 
 For deployment you can update the master-test-and-deployment.yaml file for custom deployment strategy with some other github actions
-
-##Python Modules
-Fastapi
-Pytest for unit tests
-Black
-Pre-commit for linting
-
-
-##CI/CD
-When you commit it will run Black for linting and correct the formatting errors
-When you push your project to any branch other than main or release it will run pytest with github actions
-When you create a pull request to release branch it will run the tests, generate your docker image and push it your docker image repository
-When you create a pull request it will run the test, you  can more step for your application
